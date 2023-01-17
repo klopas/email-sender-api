@@ -20,10 +20,10 @@ import static javax.mail.Message.RecipientType.TO;
 @Service
 public class EmailService {
 
-  @Value("app.sender.from")
+  @Value("${app.sender.from}")
   private String username;
 
-  @Value("app.sender.password")
+  @Value("${app.sender.password}")
   private String password;
 
   public void sendEmail(final EmailRequestDTO request) {
